@@ -1,5 +1,7 @@
 # Squad Share
 
+[![Build Status](https://travis-ci.org/weareswat/squad-share.svg?branch=travis)](https://travis-ci.org/weareswat/squad-share)
+
 * Generated using Luminus version "2.9.10.36"
 
 ## Installation

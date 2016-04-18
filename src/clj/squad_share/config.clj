@@ -4,12 +4,16 @@
             [postgres.async :as pg]
             [mount.core :refer [args defstate]]))
 
-(defstate env :start (load-config
+(defn get-config
+  []
+(load-config
                        :merge
                        [(args)
                         (source/from-system-props)
                         (source/from-env)]))
 
-(def config (read-string (slurp "env/dev/resources/config.edn")))
-(def db (pg/open-db (-> config :pg-conn)))
+(defstate env :start (get-config))
+
+(def config (-> (get-config) :pg-conn))
+(def db (pg/open-db config))
 

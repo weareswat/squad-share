@@ -1,0 +1,11 @@
+language: clojure
+sudo: false
+lein: lein2
+jdk:
+  - oraclejdk8
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+env:
+  - PG_CONN__DATABASE=travis_ci_test PG_CONN__USERNAME=postgres PG_CONN__HOSTNAME=localhost PG_CONN__PASSWORD=

@@ -3,9 +3,9 @@
  ;; when :nrepl-port is set the application starts the nREPL server on load
  :nrepl-port 7000
 
- :pg-conn {:hostname "192.168.59.103"
+ :pg-conn {:hostname "horton.elephantsql.com"
            :port 5432 ; default
-           :database "postgres"
-           :username "postgres"
-           :password "wasabi"
+           :database "dkdjukeh"
+           :username "dkdjukeh"
+           :password "V2luMVXaEQfNyDafaRYh0K7o_5X7gvVF"
            :pool-size 1}}

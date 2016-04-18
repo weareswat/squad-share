@@ -1,7 +1,7 @@
-(defproject squad-share "0.1.0-SNAPSHOT"
+(defproject weareswat/squad-share "0.1.0-SNAPSHOT"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Share web stuff with your team"
+  :url "https://github.com/weareswat/squad-share"
 
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [selmer "1.0.4"]
@@ -23,7 +23,12 @@
                  [luminus-nrepl "0.1.4"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [luminus-immutant "0.1.9"]
-                 [luminus-log4j "0.1.3"]]
+                 [luminus-log4j "0.1.3"]
+                 [environ "1.0.2"]
+                 [alaisi/postgres.async "0.6.0"]]
+
+
+  :aliases {"autotest" ["test-refresh"]}
 
   :min-lein-version "2.0.0"
 
@@ -33,7 +38,8 @@
 
   :main squad-share.core
 
-  :plugins [[lein-cprop "1.0.1"]]
+  :plugins [[lein-cprop "1.0.1"]
+            [com.jakemccrary/lein-test-refresh "0.14.0"]]
   :target-path "target/%s/"
   :profiles
   {:uberjar {:omit-source true

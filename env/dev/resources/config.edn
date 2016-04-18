@@ -1,4 +1,11 @@
 {:dev true
  :port 3000
  ;; when :nrepl-port is set the application starts the nREPL server on load
- :nrepl-port 7000}
+ :nrepl-port 7000
+
+ :pg-conn {:hostname "192.168.59.103"
+           :port 5432 ; default
+           :database "postgres"
+           :username "postgres"
+           :password "wasabi"
+           :pool-size 1}}

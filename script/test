@@ -1,0 +1,2 @@
+lein migrate
+lein test

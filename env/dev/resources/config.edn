@@ -8,4 +8,9 @@
            :database "dkdjukeh"
            :username "dkdjukeh"
            :password "V2luMVXaEQfNyDafaRYh0K7o_5X7gvVF"
-           :pool-size 1}}
+           :pool-size 1
+           :classname "com.postgresql.Driver"
+           :subprotocol "postgresql"
+           :user "dkdjukeh"
+           :subname "//horton.elephantsql.com/dkdjukeh"
+           }}

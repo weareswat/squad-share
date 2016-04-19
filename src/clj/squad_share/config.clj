@@ -6,14 +6,14 @@
 
 (defn get-config
   []
-(load-config
-                       :merge
-                       [(args)
-                        (source/from-system-props)
-                        (source/from-env)]))
+  (load-config
+   :merge
+   [(args)
+    (source/from-system-props)
+    (source/from-env)]))
 
 (defstate env :start (get-config))
 
-(def config (-> (get-config) :pg-conn))
-(def db (pg/open-db config))
+(def dbconfig (-> (get-config) :pg-conn))
+(def db (pg/open-db dbconfig))
 

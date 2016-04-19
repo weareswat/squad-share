@@ -25,11 +25,13 @@
                  [luminus-immutant "0.1.9"]
                  [luminus-log4j "0.1.3"]
                  [environ "1.0.2"]
+                 [migratus "0.8.11"]
                  [alaisi/postgres.async "0.6.0"]
                  [postgresql "9.3-1102.jdbc41"]]
 
-
-  :aliases {"autotest" ["test-refresh"]}
+  :aliases {"migrate"  ["run" "-m" "squad-share.migrations/migrate"]
+            "rollback" ["run" "-m" "squad-share.migrations/rollback"]
+            "autotest" ["test-refresh"]}
 
   :min-lein-version "2.0.0"
 

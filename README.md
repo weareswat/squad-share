@@ -6,6 +6,7 @@
 
 ## Installation
 
+* Install JDK 1.8: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 * Install Leiningen: http://leiningen.org/
 * Clone the repo
 * Run the app with `lein run`. It will open on `localhost:3000`

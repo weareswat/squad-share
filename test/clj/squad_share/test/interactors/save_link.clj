@@ -13,6 +13,7 @@
         (prn result)
     ;; expecting result to be {:success true :link {... saved link data}}
     (is (true? (:success result)))
+    (is (:link result))
 
     (testing "the link is actually on the db"
       (let [result (<!! (pg/execute! config/db ["select * from squadshare.links where title=$1" title]))]

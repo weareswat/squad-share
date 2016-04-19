@@ -27,7 +27,9 @@
                  [environ "1.0.2"]
                  [migratus "0.8.11"]
                  [alaisi/postgres.async "0.6.0"]
-                 [postgresql "9.3-1102.jdbc41"]]
+                 [postgresql "9.3-1102.jdbc41"]
+                 [cheshire "5.6.1"]
+                 [clj-time "0.11.0"]]
 
   :aliases {"migrate"  ["run" "-m" "squad-share.migrations/migrate"]
             "rollback" ["run" "-m" "squad-share.migrations/rollback"]
@@ -46,7 +48,7 @@
   :target-path "target/%s/"
   :profiles
   {:uberjar {:omit-source true
-             
+
              :aot :all
              :uberjar-name "squad-share.jar"
              :source-paths ["env/prod/clj"]
@@ -58,8 +60,8 @@
                                  [ring/ring-devel "1.4.0"]
                                  [pjstadig/humane-test-output "0.8.0"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.14.0"]]
-                  
-                  
+
+
                   :source-paths ["env/dev/clj" "test/clj"]
                   :resource-paths ["env/dev/resources"]
                   :repl-options {:init-ns user}

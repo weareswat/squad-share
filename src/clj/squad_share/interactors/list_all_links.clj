@@ -1,4 +1,4 @@
-(ns squad_share.interactors.list-all-links
+(ns squad-share.interactors.list-all-links
      (:require
        [clojure.core.async :refer [go <!!]]
        [postgres.async :as pg]
@@ -6,7 +6,7 @@
 
 (defn run!
       [context]
-      (let [result (<!! (pg/select config/db {:table "squadshare.links"}))]
-           )
-
+      (let [ result (<!! (pg/execute! config/db ["select title from squadshare.links"])) ]
+        result
       )
+)

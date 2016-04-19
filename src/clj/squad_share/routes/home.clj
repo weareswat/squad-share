@@ -1,8 +1,9 @@
 (ns squad-share.routes.home
   (:require [squad-share.layout :as layout]
-            [compojure.core :refer [defroutes GET]]
+            [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
-            [clojure.java.io :as io]))
+            [clojure.java.io :as io]
+            [squad-share.controllers.save-link :as save-link]))
 
 (defn home-page []
   (layout/render
@@ -13,5 +14,6 @@
 
 (defroutes home-routes
   (GET "/" [] (home-page))
-  (GET "/about" [] (about-page)))
-
+  (GET "/about" [] (about-page))
+  (POST "/save-link.json" request (save-link/handler request))
+)

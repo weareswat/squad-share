@@ -25,7 +25,8 @@
                  [luminus-immutant "0.1.9"]
                  [luminus-log4j "0.1.3"]
                  [environ "1.0.2"]
-                 [alaisi/postgres.async "0.6.0"]]
+                 [alaisi/postgres.async "0.6.0"]
+                 [postgresql "9.3-1102.jdbc41"]]
 
 
   :aliases {"autotest" ["test-refresh"]}

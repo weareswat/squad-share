@@ -5,7 +5,10 @@
             [postgres.async :as pg]
             [squad-share.config :as config]
             [squad-share.handler :as handler]
+            [squad-share.test.test-utils :as test-utils]
             [cheshire.core :refer :all]))
+
+(use-fixtures :each test-utils/cleanup)
 
 (deftest save-link-route
   (testing "save link route"

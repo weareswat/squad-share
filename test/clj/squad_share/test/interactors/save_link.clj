@@ -3,7 +3,10 @@
             [clojure.core.async :refer [go <!!]]
             [postgres.async :as pg]
             [squad-share.config :as config]
+            [squad-share.test.test-utils :as test-utils]
             [squad-share.interactors.save-link :as save-link]))
+
+(use-fixtures :each test-utils/cleanup)
 
 (deftest add-link
   (let [title (str (java.util.UUID/randomUUID))

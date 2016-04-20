@@ -1,2 +1,13 @@
 {:production true
- :port 3000}
+
+ :pg-conn {:hostname "ec2-176-34-127-73.eu-west-1.compute.amazonaws.com"
+           :port 5432 ; default
+           :database "ddpj899594gb83"
+           :username "lacxxylalfbakp"
+           :password "7f9q50CRcxh-PdZWU0AKG2eVbX"
+           :pool-size 1
+           :classname "com.postgresql.Driver"
+           :subprotocol "postgresql"
+           :user "lacxxylalfbakp"
+           :subname "//ec2-176-34-127-73.eu-west-1.compute.amazonaws.com/ddpj899594gb83"
+           }}

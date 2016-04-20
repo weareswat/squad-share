@@ -15,5 +15,6 @@
 (defroutes home-routes
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
-  (POST "/save-link.json" request (save-link/handler request))
+  (POST "/save-link.json" request (save-link/handler-json request))
+  (POST "/save-link" request (save-link/handler request))
 )

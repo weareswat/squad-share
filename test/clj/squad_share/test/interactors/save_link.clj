@@ -13,7 +13,6 @@
         link {:title title :description "Description" :url "http://test"}
         context {}
         result (save-link/run! context link)]
-        (prn result)
     ;; expecting result to be {:success true :link {... saved link data}}
     (is (true? (:success result)))
     (is (:link result))

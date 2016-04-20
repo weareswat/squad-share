@@ -10,8 +10,8 @@
 
 (use-fixtures :each test-utils/cleanup)
 
-(deftest save-link-route
-  (testing "save link route"
+(deftest save-link-json-route
+  (testing "save link json route"
     (let [title (str (java.util.UUID/randomUUID))
           link {:title title :description "Description" :url "http://test"}
           link_json (generate-string link)
@@ -25,4 +25,17 @@
           (is (= title (-> result :rows first :title)))))
       (testing "the response has the link "
         (is (= title (:title body))))
+)))
+
+(deftest save-link-route
+  (testing "save link route"
+    (let [title (str (java.util.UUID/randomUUID))
+          link (str "description=description&url=http://test&title=" title)
+          response ((handler/app) (request :post "/save-link" link))
+          ]
+      (is (= 301 (:status response)))
+      (is (= "/" (:location response)))
+      (testing "the link is actually on the db"
+        (let [result (<!! (pg/execute! config/db ["select * from squadshare.links where title=$1" title]))]
+          (is (= title (-> result :rows first :title)))))
 )))

@@ -1,7 +1,4 @@
 {:production true
- ;; :port 3000
- ;; when :nrepl-port is set the application starts the nREPL server on load
- ;; :nrepl-port 7000
 
  :pg-conn {:hostname "ec2-176-34-127-73.eu-west-1.compute.amazonaws.com"
            :port 5432 ; default
@@ -12,5 +9,5 @@
            :classname "com.postgresql.Driver"
            :subprotocol "postgresql"
            :user "lacxxylalfbakp"
-        ;; :subname "//horton.elephantsql.com/aqempuqr"
+           :subname "//ec2-176-34-127-73.eu-west-1.compute.amazonaws.com/ddpj899594gb83"
            }}

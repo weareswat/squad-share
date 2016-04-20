@@ -7,6 +7,7 @@
 (defn run!
   [context]
   (let [ result (<!! (pg/execute! config/db ["select title, url, description from squadshare.links"])) ]
+    (prn result)
     (result :rows)
   )
 )

@@ -9,4 +9,4 @@ services:
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
 env:
-  - PG_CONN__DATABASE=travis_ci_test PG_CONN__USERNAME=postgres PG_CONN__HOSTNAME=localhost PG_CONN__PASSWORD=
+  - PG_CONN__DATABASE=travis_ci_test PG_CONN__USERNAME=postgres PG_CONN__HOSTNAME=localhost PG_CONN__PASSWORD= PG_CONN__SUBNAME=//localhost/travis_ci_test

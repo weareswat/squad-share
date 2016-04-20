@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <div>
+    <h1>Links</h1>
+    <ul>
+      {% for link in links %}
+        <li>
+          <div>{{link.title}}</div>
+          <a href="{{link.url}}">{{link.url}}</a>
+          <div>{{link.description}}</div>
+          <div>{{link.created_at}}</div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

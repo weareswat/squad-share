@@ -54,7 +54,8 @@
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
    :prod           [:project/prod]
-   :project/prod {:resource-paths ["env/prod/resources" "env/prod/resources"]}
+   :project/prod {:resource-paths ["env/prod/resources" "env/prod/resources"]
+                  :source-paths ["env/prod/clj"]}
    :dev           [:project/dev :profiles/dev]
    :test          [:project/test :profiles/test]
    :project/dev  {:dependencies [[prone "1.1.1"]

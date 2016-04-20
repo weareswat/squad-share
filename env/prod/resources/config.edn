@@ -10,4 +10,5 @@
            :subprotocol "postgresql"
            :user "lacxxylalfbakp"
            :subname "//ec2-176-34-127-73.eu-west-1.compute.amazonaws.com/ddpj899594gb83"
+           :sslmode require
            }}

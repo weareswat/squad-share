@@ -53,6 +53,8 @@
              :uberjar-name "squad-share.jar"
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
+   :prod           [:project/prod]
+   :project/prod {:resource-paths ["env/prod/resources" "env/prod/resources"]}
    :dev           [:project/dev :profiles/dev]
    :test          [:project/test :profiles/test]
    :project/dev  {:dependencies [[prone "1.1.1"]

@@ -17,5 +17,6 @@
   (GET "/" [] (home-page))
   (GET "/about" [] (about-page))
   (GET "/links" request (list-links/handler request))
-  (POST "/save-link.json" request (save-link/handler request))
+  (POST "/save-link.json" request (save-link/handler-json request))
+  (POST "/save-link" request (save-link/handler request))
 )

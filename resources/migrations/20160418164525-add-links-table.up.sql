@@ -1,5 +1,3 @@
-CREATE SCHEMA IF NOT EXISTS squadshare;
-
 CREATE TABLE IF NOT EXISTS squadshare.links
 (id SERIAL PRIMARY KEY,
  title VARCHAR(50),

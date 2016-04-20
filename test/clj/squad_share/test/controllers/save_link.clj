@@ -30,12 +30,11 @@
 (deftest save-link-route
   (testing "save link route"
     (let [title (str (java.util.UUID/randomUUID))
-          link (str "description=description&url=http://test&title=" title)
-          response ((handler/app) (request :post "/save-link" link))
+          link (str "?description=description&url=http://test&title=" title)
+          response ((handler/app) (request :post (str "/save-link" link) ""))
           ]
       (is (= 301 (:status response)))
-      (is (= "/" (:location response)))
+      (is (get-in response [:headers "Location"]))
       (testing "the link is actually on the db"
         (let [result (<!! (pg/execute! config/db ["select * from squadshare.links where title=$1" title]))]
-          (is (= title (-> result :rows first :title)))))
-)))
+          (is (= title (-> result :rows first :title))))))))

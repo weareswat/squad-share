@@ -41,10 +41,11 @@
 (defn handler
   "Save link using querystring format on body"
   [request]
-  (let [result (save-link/run! {} (:form-params request))
+  (let [params (:params request)
+        result (save-link/run! {} params)
         id (get-in result [:link :id])]
      (if (:success result)
-        {:status 301 :headers {"Location" (str "/?added=" id)}}
+        {:status 301 :headers {"Location" (str "/links?added=" id)}}
         {:status 500})))
 
 (defn handler-html

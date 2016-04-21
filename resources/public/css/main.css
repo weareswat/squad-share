@@ -74,6 +74,20 @@ a:hover {
   float: right;
 }
 
+/* line 1, ../sass/modules/_footer.scss */
+.ss-footer {
+  width: 100%;
+  height: 48px;
+  background-color: #a3b7d6;
+}
+/* line 6, ../sass/modules/_footer.scss */
+.ss-footer p {
+  color: white;
+  line-height: 48px;
+  margin: 0;
+  font-weight: 300;
+}
+
 /* line 2, ../sass/modules/_search.scss */
 .ss-search {
   padding-left: 0;
@@ -190,13 +204,19 @@ a:hover {
   background-color: pink;
 }
 
-/* line 119, ../sass/modules/_link-module.scss */
+/* line 118, ../sass/modules/_link-module.scss */
+.ss-link-add-module {
+  background-color: #dae2ef;
+  height: 304px;
+}
+
+/* line 125, ../sass/modules/_link-module.scss */
 .title-add-link .icon-link-url {
   background: url("../images/icon_addurl.svg") no-repeat center center;
   width: 100%;
   height: 95px;
 }
-/* line 124, ../sass/modules/_link-module.scss */
+/* line 130, ../sass/modules/_link-module.scss */
 .title-add-link h3 {
   text-align: center;
   width: 100%;
@@ -205,12 +225,12 @@ a:hover {
   margin: 24px 0;
 }
 
-/* line 134, ../sass/modules/_link-module.scss */
+/* line 140, ../sass/modules/_link-module.scss */
 .ss-link-default {
-  background: url("../images/default.svf") no-repeat center center;
-  height: 200px;
-  background-color: pink;
+  background: url("../images/default_link.svg") no-repeat center center;
+  height: 304px;
   display: block;
+  margin-top: -6px;
 }
 
 /* line 2, ../sass/pages/_links-page.scss */

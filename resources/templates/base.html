@@ -14,19 +14,24 @@
     {% style "/css/main.css" %}
   </head>
   <body>
-      <!-- navbar -->
-      <nav class="navbar ss-navbar" role="navigation">
-        <div class="container">
-          <a class="navbar-brand navbar-left ss-navbar__brand" href="{{servlet-context}}/">SquadShare</a>
-          <h1 class="ss-navbar__title">Share Links with your team</h1>
-        </div>
-      </nav>
+    <!-- navbar -->
+    <nav class="navbar ss-navbar" role="navigation">
+      <div class="container">
+        <a class="navbar-brand navbar-left ss-navbar__brand" href="{{servlet-context}}/">SquadShare</a>
+        <h1 class="ss-navbar__title">Share Links with your team</h1>
+      </div>
+    </nav>
 
     <div class="container-fluid">
       {% block content %}
       {% endblock %}
     </div>
 
+    <div class="container-fluid ss-footer">
+      <div class="container">
+      <p>&copy; 2016 Powered by SWAT</p>
+      </div>
+    </div>
     <!-- scripts -->
     {% script "/assets/jquery/jquery.min.js" %}
     {% script "/assets/tether/dist/js/tether.min.js" %}

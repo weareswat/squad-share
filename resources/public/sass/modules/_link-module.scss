@@ -115,6 +115,12 @@
 
 
 // Add Link
+.ss-link-add-module{
+	background-color: $primary-color-light;
+	height: 304px;
+}
+
+
 .title-add-link{
 	.icon-link-url{
 		background: url("../images/icon_addurl.svg") no-repeat center center;
@@ -132,8 +138,8 @@
 
 // Add Default
 .ss-link-default{
-	background: url('../images/default.svf') no-repeat center center;
-	height: 200px;
-	background-color: pink;
+	background: url('../images/default_link.svg') no-repeat center center;
+	height: 304px;
 	display: block;
+	margin-top: -6px;
 }

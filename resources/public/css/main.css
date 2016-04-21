@@ -3,3 +3,44 @@
 html, body {
   font-family: 'Roboto', sans-serif;
 }
+
+/* line 2, ../sass/modules/_navbar.scss */
+.ss-navbar {
+  padding: 48px 0;
+}
+
+/* line 6, ../sass/modules/_navbar.scss */
+.ss-navbar__brand {
+  color: #a3b7d6;
+  font-size: 35px;
+  font-weight: 700;
+  padding: 0;
+}
+/* line 12, ../sass/modules/_navbar.scss */
+.ss-navbar__brand:hover {
+  color: #a3b7d6;
+  opacity: 0.7;
+}
+
+/* line 17, ../sass/modules/_navbar.scss */
+.ss-navbar__title {
+  color: #a3b7d6;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0;
+  display: inline-block;
+  line-height: 48px;
+  float: right;
+}
+
+/* line 2, ../sass/modules/_search.scss */
+.ss-search {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 6, ../sass/modules/_search.scss */
+.ss-search__title {
+  text-align: center;
+  margin-bottom: 24px;
+}

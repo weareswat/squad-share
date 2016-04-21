@@ -1,1 +1,25 @@
 //Navbar
+.ss-navbar{
+	padding: 48px 0;
+
+}
+.ss-navbar__brand{
+	color: $primary-color;
+	font-size: 35px;
+	font-weight: 700;
+	padding: 0;
+
+	&:hover{
+		color: $primary-color;
+		opacity: 0.7;
+	}
+}
+.ss-navbar__title{
+	color: $primary-color;
+	font-size: 20px;
+	font-weight: 300;
+	padding: 0;
+	display: inline-block;
+	line-height: 48px;
+	float: right;
+}

@@ -14,7 +14,7 @@
   (layout/render "about.html"))
 
 (defroutes home-routes
-  (GET "/" [] (home-page))
+  (GET "/" request (list-links/handler request))
   (GET "/about" [] (about-page))
   (GET "/links" request (list-links/handler request))
   (GET "/save-link" request (save-link/handler-html request))

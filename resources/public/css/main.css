@@ -190,7 +190,22 @@ a:hover {
   background-color: pink;
 }
 
-/* line 120, ../sass/modules/_link-module.scss */
+/* line 119, ../sass/modules/_link-module.scss */
+.title-add-link .icon-link-url {
+  background: url("../images/icon_addurl.svg") no-repeat center center;
+  width: 100%;
+  height: 95px;
+}
+/* line 124, ../sass/modules/_link-module.scss */
+.title-add-link h3 {
+  text-align: center;
+  width: 100%;
+  color: #a3b7d6;
+  font-weight: 300;
+  margin: 24px 0;
+}
+
+/* line 134, ../sass/modules/_link-module.scss */
 .ss-link-default {
   background: url("../images/default.svf") no-repeat center center;
   height: 200px;

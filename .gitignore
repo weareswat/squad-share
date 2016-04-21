@@ -10,5 +10,4 @@ profiles.clj
 /.env
 .nrepl-port
 /log
-/env/dev/resources/config.edn
 /.idea/*

@@ -1,0 +1,16 @@
+{:dev true
+ :port 3000
+ ;; when :nrepl-port is set the application starts the nREPL server on load
+ :nrepl-port 7000
+
+ :pg-conn {:hostname "horton.elephantsql.com"
+           :port 5432 ; default
+           :database "aqempuqr"
+           :username "aqempuqr"
+           :password "zaMnhan1MEQ8FXjJSvcfZ56Zo6jnhp4m"
+           :pool-size 1
+           :classname "com.postgresql.Driver"
+           :subprotocol "postgresql"
+           :user "aqempuqr"
+           :subname "//horton.elephantsql.com/aqempuqr"
+           }}

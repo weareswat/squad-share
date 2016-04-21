@@ -1,16 +1,27 @@
-{% block content %}
+<div class="col-md-6 col-md-offset-4 col-sm-12 col-xs-12 add-link">
+	{% block content %}
 
-<form action="/save-link" method="POST">
-  <label for="title">Title</label>
-  <input id="title" type="text" name="title" />
+	<form role="form" action="/save-link" method="POST">
+		<div class="form-group float-label-control">
+			<label for="title">Title</label>
+			<input id="title" type="text" name="title" class="form-control" placeholder="title" />
+		</div>
 
-  <label for="url">Url</label>
-  <input id="url" type="text" name="url" />
+		<div class="form-group float-label-control">
+		  <label for="url">Url</label>
+		  <input id="url" type="text" name="url" class="form-control" placeholder="url"/>
+		</div>
 
-  <label for="description">Description</label>
-  <input id="description" type="text" name="description" />
+		<div class="form-group float-label-control">
+		  <label for="description">Description</label>
+		  <textarea id="description" type="text" name="description"  class="form-control" placeholder="description" rows="1"></textarea>
+		  <!-- <input id="description" type="text" name="description" class="form-control" placeholder="description" /> -->
+		</div>
 
-  <input type="submit" value="Create" />
-</form>
+	  <input type="submit" value="Create" />
+	</form>
 
-{% endblock %}
+	{% endblock %}
+</div>
+
+{% script "../../../js/floatLabels.js" %}

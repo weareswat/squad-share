@@ -1,69 +1,68 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
-/* line 4, ../sass/helpers/_typography.scss */
+/* line 4, ../../sass/helpers/_typography.scss */
 html, body {
   font-family: 'Roboto', sans-serif;
-  color: #666666;
 }
 
-/* line 9, ../sass/helpers/_typography.scss */
+/* line 8, ../../sass/helpers/_typography.scss */
 h1 {
   font-size: 30px;
 }
 
-/* line 10, ../sass/helpers/_typography.scss */
+/* line 9, ../../sass/helpers/_typography.scss */
 h2 {
   font-size: 35px;
 }
 
-/* line 11, ../sass/helpers/_typography.scss */
+/* line 10, ../../sass/helpers/_typography.scss */
 h3 {
   font-size: 20px;
 }
 
-/* line 12, ../sass/helpers/_typography.scss */
+/* line 11, ../../sass/helpers/_typography.scss */
 h4 {
   font-size: 15px;
 }
 
-/* line 13, ../sass/helpers/_typography.scss */
+/* line 12, ../../sass/helpers/_typography.scss */
 h5 {
   font-size: 15px;
 }
 
-/* line 14, ../sass/helpers/_typography.scss */
+/* line 13, ../../sass/helpers/_typography.scss */
 p {
   font-size: 14px;
 }
 
-/* line 2, ../sass/helpers/_links.scss */
+/* line 2, ../../sass/helpers/_links.scss */
 a {
   color: #666666;
 }
-/* line 5, ../sass/helpers/_links.scss */
+/* line 5, ../../sass/helpers/_links.scss */
 a:hover {
   color: #666666;
   text-decoration: none;
 }
 
-/* line 2, ../sass/modules/_navbar.scss */
+/* line 2, ../../sass/modules/_navbar.scss */
 .ss-navbar {
   padding: 48px 0;
 }
 
-/* line 5, ../sass/modules/_navbar.scss */
+/* line 5, ../../sass/modules/_navbar.scss */
 .ss-navbar__brand {
   color: #a3b7d6;
   font-size: 35px;
   font-weight: 700;
   padding: 0;
 }
-/* line 11, ../sass/modules/_navbar.scss */
+/* line 11, ../../sass/modules/_navbar.scss */
 .ss-navbar__brand:hover {
   color: #a3b7d6;
   opacity: 0.7;
 }
 
-/* line 16, ../sass/modules/_navbar.scss */
+/* line 16, ../../sass/modules/_navbar.scss */
 .ss-navbar__title {
   color: #a3b7d6;
   font-size: 20px;
@@ -74,23 +73,23 @@ a:hover {
   float: right;
 }
 
-/* line 2, ../sass/modules/_search.scss */
+/* line 2, ../../sass/modules/_search.scss */
 .ss-search {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 6, ../sass/modules/_search.scss */
+/* line 6, ../../sass/modules/_search.scss */
 .ss-search__title {
   text-align: center;
   margin-bottom: 24px;
 }
 
-/* line 2, ../sass/modules/_link-module.scss */
+/* line 2, ../../sass/modules/_link-module.scss */
 .ss-link-module {
   margin-bottom: 48px;
 }
-/* line 5, ../sass/modules/_link-module.scss */
+/* line 5, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__image {
   border-top: 6px solid #a3b7d6;
   width: 100%;
@@ -98,38 +97,32 @@ a:hover {
   overflow: hidden;
   margin-bottom: 12px;
 }
-/* line 12, ../sass/modules/_link-module.scss */
+/* line 12, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__image img {
   width: 100%;
 }
-/* line 16, ../sass/modules/_link-module.scss */
-.ss-link-module .ss-link-module__content {
-  min-height: 72px;
-  width: 100%;
-}
-/* line 21, ../sass/modules/_link-module.scss */
+/* line 17, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__title {
   font-weight: 500;
-  margin-bottom: 8px;
-  color: #4d4d4d;
+  margin-bottom: 12px;
 }
-/* line 27, ../sass/modules/_link-module.scss */
+/* line 22, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__desc {
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 12px;
   color: #999999;
 }
-/* line 35, ../sass/modules/_link-module.scss */
+/* line 28, ../../sass/modules/_link-module.scss */
 .ss-link-module hr {
   margin: 0 0 12px 0;
   border-top: 1px solid #f2f2f2;
 }
-/* line 42, ../sass/modules/_link-module.scss */
+/* line 37, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__info {
   max-width: 54%;
   display: initial;
 }
-/* line 48, ../sass/modules/_link-module.scss */
+/* line 43, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__picture {
   margin: 0;
   width: 30px;
@@ -140,65 +133,57 @@ a:hover {
   display: inline-block;
   margin-right: 6px;
 }
-/* line 58, ../sass/modules/_link-module.scss */
+/* line 53, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__picture img {
   width: 100%;
 }
-/* line 63, ../sass/modules/_link-module.scss */
+/* line 58, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__author {
   display: inline-block;
 }
-/* line 66, ../sass/modules/_link-module.scss */
+/* line 61, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__author .ss-link-module__name {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   margin-bottom: -6px;
 }
-/* line 73, ../sass/modules/_link-module.scss */
+/* line 68, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__author .ss-link-module__date {
   display: inline-block;
   font-size: 11px;
   font-weight: 300;
-  color: #999999;
+  margin-bottom: 0;
 }
-/* line 81, ../sass/modules/_link-module.scss */
+/* line 76, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__icons-wrapper {
   float: right;
   margin-top: 8px;
 }
-/* line 85, ../sass/modules/_link-module.scss */
+/* line 80, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__icons-wrapper span {
   width: 18px;
   height: 18px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 12px;
 }
-/* line 92, ../sass/modules/_link-module.scss */
+/* line 87, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__icons-wrapper .ss-icon-like {
   background-image: url("");
   background-color: blue;
 }
-/* line 99, ../sass/modules/_link-module.scss */
+/* line 94, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__icons-wrapper .ss-icon-fav {
   background-image: url("");
   background-color: green;
 }
-/* line 106, ../sass/modules/_link-module.scss */
+/* line 101, ../../sass/modules/_link-module.scss */
 .ss-link-module .ss-link-module__icons-wrapper .ss-icon-comment {
   background-image: url("");
   background-color: pink;
 }
 
-/* line 120, ../sass/modules/_link-module.scss */
-.ss-link-default {
-  background: url("../images/default.svf") no-repeat center center;
-  height: 200px;
-  background-color: pink;
-  display: block;
-}
-
-/* line 2, ../sass/pages/_links-page.scss */
+/* line 2, ../../sass/pages/_links-page.scss */
 .ss-links-wrapper {
   padding: 0;
 }

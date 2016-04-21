@@ -19,14 +19,14 @@
   {% for link in links %} 
   <div class="col-md-3 ss-link-module">
     <a href="{{link.url}}">
-      <span></span>
-      
+
       <figure class="ss-link-module__image">
         <img src="http://fillmurray.com/300/300" alt="Phill Murray">
       </figure>
-
-      <h3>{{link.title}}</h3>
-      <p>{{link.description}}</p>
+      <div class="ss-link-module__content">
+        <h3 class="ss-link-module__title">{{link.title}}</h3>
+        <p class="ss-link-module__desc">{{link.description}}</p>  
+      </div>
       
       <hr>
     </a>
@@ -55,6 +55,11 @@
   <div class="col-md-3 ss-link-add-module">
 
 <!--     height 296px -->
+  </div>
+
+
+  <div class="col-md-3 ss-link-default">
+  teste
   </div>
 
 

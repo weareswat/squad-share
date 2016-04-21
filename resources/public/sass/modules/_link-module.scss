@@ -1,0 +1,109 @@
+// Links Module
+.ss-link-module{
+	margin-bottom: 48px;
+
+	.ss-link-module__image{
+		border-top: 6px solid $primary-color;
+		width: 100%;
+		height: 144px;
+		overflow: hidden;
+		margin-bottom: 12px;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.ss-link-module__title{
+		font-weight: 500;
+		margin-bottom: 12px;
+	}
+
+	.ss-link-module__desc{
+		font-weight: 500;
+		margin-bottom: 12px;
+		color: $light-text-color;
+	}
+	
+	hr {
+		margin: 0 0 12px 0;
+		border-top: 1px solid #f2f2f2;
+	}
+
+
+
+
+	// Separação Div
+	.ss-link-module__info{
+		max-width: 54%;
+		display: initial;
+	}
+
+
+	.ss-link-module__picture{
+		margin: 0;
+		width: 30px;
+		height: 30px;
+		overflow: hidden;
+		border-radius: 30px;
+		-webkit-border-radius: 30px;
+		display: inline-block;
+		margin-right: 6px;
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.ss-link-module__author{
+		display: inline-block;
+
+		.ss-link-module__name{
+			display:block;
+			font-size: 14px;
+			font-weight: 400;
+			margin-bottom: -6px;
+		}
+
+		.ss-link-module__date{
+			display: inline-block;
+			font-size: 11px;
+			font-weight: 300;
+			margin-bottom: 0;
+		}
+	}
+
+	.ss-link-module__icons-wrapper{
+		float: right;
+		margin-top: 8px;
+
+		span{
+			width: 18px;
+			height: 18px;
+			display: inline-block;
+			margin-left: 12px;
+		}
+
+		.ss-icon-like{
+			background-image: url('');
+			background-color: blue;
+			&:hover{
+
+			}
+		}
+		.ss-icon-fav{
+			background-image: url('');
+			background-color: green;
+			&:hover{
+				
+			}
+		}
+		.ss-icon-comment{
+			background-image: url('');
+			background-color: pink;
+			&:hover{
+				
+			}
+		}
+	}
+}

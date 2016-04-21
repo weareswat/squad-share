@@ -1,18 +1,65 @@
 {% extends "base.html" %}
 {% block content %}
-  <div>
-
-    {% include "save-link-form.html" %}
-    <h1>Links</h1>
-    <ul>
-      {% for link in links %}
-        <li>
-          <div>{{link.title}}</div>
-          <a href="{{link.url}}">{{link.url}}</a>
-          <div>{{link.description}}</div>
-          <div>{{link.created_at}}</div>
-        </li>
-      {% endfor %}
-    </ul>
+<!-- Apagar -->
+<div class="row"> 
+  <div class="col-md-12 ss-search">
+    <h2 class="ss-search__title">search links</h2>
+    <p>sdfsdf</p>
   </div>
+</div>
+<!-- Apagar -->
+
+
+
+<div class="row"> 
+<div class="container ss-links-wrapper">
+  
+  
+  <!--   Link Module -->
+  {% for link in links %} 
+  <div class="col-md-3 ss-link-module">
+    <a href="{{link.url}}">
+      <span></span>
+      
+      <figure class="ss-link-module__image">
+        <img src="http://fillmurray.com/300/300" alt="Phill Murray">
+      </figure>
+
+      <h3>{{link.title}}</h3>
+      <p>{{link.description}}</p>
+      
+      <hr>
+    </a>
+
+    <div class="ss-link-module__info">
+      <figure class="ss-link-module__picture">
+        <img src="http://fillmurray.com/40/40" alt="User Picture">
+      </figure>
+      <div class="ss-link-module__author">
+        <p class="ss-link-module__name">Pedro Nogueira</p>
+        <p class="ss-link-module__date">{{link.created_at}} 24 Jan 2016</p>    
+      </div>
+      <div class="ss-link-module__icons-wrapper">
+        <span class="ss-icon-like"></span>
+        <span class="ss-icon-fav"></span>
+        <span class="ss-icon-comment"></span>
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+  <!--  End Link Module -->
+
+  {% include "save-link-form.html" %}
+
+  <div class="col-md-3 ss-link-add-module">
+
+<!--     height 296px -->
+  </div>
+
+
+</div><!--   End ss-links-wrapper -->
+</div><!--   End Row -->
+
+</div>
 {% endblock %}

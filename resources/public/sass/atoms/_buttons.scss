@@ -1,0 +1,60 @@
+.btn{
+	position:relative;
+	font-size: 25px;
+	font-weight: 300;
+	border: none;
+	cursor: pointer;
+	padding: 20px 0;
+	display: inline-block;
+	float: right;
+	width: 100%;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	transition: all 0.2s;
+	@include border-radius(0);
+	text-align:center;
+	-webkit-backface-visibility: hidden;
+	outline: none;
+	margin: 0 0 15px 0;
+	line-height: 20px;
+	text-decoration: none !important;
+
+	&:hover {
+		@include opacity (1);
+		text-decoration:none;
+	}
+
+	&.disabled {
+		cursor:wait;
+
+		&:hover {
+			@include opacity (1);
+			cursor:wait;
+			text-decoration:none;
+		}
+
+		&:active {
+			cursor:wait;
+			text-decoration:none;
+			top:0px;
+		}
+	}
+}
+
+.btn-primary{
+	background: $purple-color;
+	color: $white-color;
+	&:hover{
+		background: $purple-color-dark;
+		color: $white-color;
+	}
+}
+
+.btn-secondary{
+	background: $primary-color;
+	color: $primary-color-dark;
+	&:hover{
+		background: $primary-color-dark;
+		color: $white-color;
+	}
+}

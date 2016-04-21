@@ -73,7 +73,6 @@
     };
 
     $(function () {
-        alert("cenas");
         $('.float-label-control').floatLabels();
     });
 })(jQuery);

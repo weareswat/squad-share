@@ -1,6 +1,6 @@
+@include sticky-footer(48px, "#root", "#root-footer", "#footer");
+
 .ss-footer{
-	width: 100%;
-	height: 48px;
 	background-color: $primary-color;
 
 	p{
@@ -10,3 +10,8 @@
 		font-weight: 300;
 	}
 }
+@media screen and (max-width: 500px){
+	.ss-footer p{
+		text-align: center;
+	}
+} 

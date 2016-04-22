@@ -22,3 +22,14 @@
 	line-height: 48px;
 	float: right;
 }
+
+
+
+@media screen and (max-width: 500px){
+	.ss-navbar__brand,
+	.ss-navbar__title{
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+} 

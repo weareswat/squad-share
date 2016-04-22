@@ -717,12 +717,17 @@ html, body {
 }
 
 /* line 14, ../sass/vendors/_overrides.scss */
+.add-link {
+  margin-bottom: 48px;
+}
+
+/* line 19, ../sass/vendors/_overrides.scss */
 .title-add-link .icon-link-url {
   background: url("../images/icon_addurl.svg") no-repeat center center;
   width: 100%;
   height: 95px;
 }
-/* line 19, ../sass/vendors/_overrides.scss */
+/* line 24, ../sass/vendors/_overrides.scss */
 .title-add-link h3 {
   text-align: center;
   width: 100%;
@@ -731,7 +736,7 @@ html, body {
   margin: 24px 0;
 }
 
-/* line 28, ../sass/vendors/_overrides.scss */
+/* line 33, ../sass/vendors/_overrides.scss */
 .form-all {
   margin-bottom: 24px;
 }

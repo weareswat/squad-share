@@ -140,10 +140,42 @@ a:hover {
   float: right;
 }
 
-/* line 1, ../sass/modules/_footer.scss */
-.ss-footer {
-  width: 100%;
+@media screen and (max-width: 500px) {
+  /* line 30, ../sass/modules/_navbar.scss */
+  .ss-navbar__brand,
+  .ss-navbar__title {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+/* line 10, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -48px;
+}
+/* line 18, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root #root-footer {
   height: 48px;
+}
+
+/* line 20, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 48px;
+}
+
+/* line 3, ../sass/modules/_footer.scss */
+.ss-footer {
   background-color: #a3b7d6;
 }
 /* line 6, ../sass/modules/_footer.scss */
@@ -154,6 +186,12 @@ a:hover {
   font-weight: 300;
 }
 
+@media screen and (max-width: 500px) {
+  /* line 14, ../sass/modules/_footer.scss */
+  .ss-footer p {
+    text-align: center;
+  }
+}
 /* line 2, ../sass/modules/_search.scss */
 .ss-search {
   padding-left: 0;
@@ -439,7 +477,11 @@ a:hover {
   }
 }
 
-/* line 3, ../sass/modules/_link-module.scss */
+/* line 2, ../sass/modules/_link-module.scss */
+.card-add-url {
+  min-height: 304px;
+}
+/* line 5, ../sass/modules/_link-module.scss */
 .card-add-url .add-url {
   background: #dae2ef;
   border-top: 6px solid #a3b7d6;
@@ -447,27 +489,28 @@ a:hover {
   -webkit-transition: all .25s ease-out;
   transition: all .25s ease-out;
 }
-/* line 9, ../sass/modules/_link-module.scss */
+/* line 11, ../sass/modules/_link-module.scss */
 .card-add-url .add-url .title-add-link {
   padding: 70px 0px;
 }
-/* line 12, ../sass/modules/_link-module.scss */
+/* line 14, ../sass/modules/_link-module.scss */
 .card-add-url .add-url:hover {
   opacity: 0.3;
 }
 
-/* line 19, ../sass/modules/_link-module.scss */
+/* line 21, ../sass/modules/_link-module.scss */
 .ss-link-module {
   margin-bottom: 24px;
+  min-height: 304px;
 }
-/* line 22, ../sass/modules/_link-module.scss */
+/* line 25, ../sass/modules/_link-module.scss */
 .ss-link-module a {
   width: 100%;
   float: left;
   color: #999999;
   font-weight: 300;
 }
-/* line 29, ../sass/modules/_link-module.scss */
+/* line 32, ../sass/modules/_link-module.scss */
 .ss-link-module .module {
   border-top: 6px solid #a3b7d6;
   width: 100%;
@@ -475,45 +518,45 @@ a:hover {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-/* line 36, ../sass/modules/_link-module.scss */
+/* line 39, ../sass/modules/_link-module.scss */
 .ss-link-module .module:hover {
   opacity: 0.3;
 }
-/* line 40, ../sass/modules/_link-module.scss */
+/* line 43, ../sass/modules/_link-module.scss */
 .ss-link-module .module img {
   width: 100%;
   margin-bottom: 15px;
 }
-/* line 45, ../sass/modules/_link-module.scss */
+/* line 48, ../sass/modules/_link-module.scss */
 .ss-link-module .module h3 {
   color: #4d4d4d;
 }
-/* line 49, ../sass/modules/_link-module.scss */
+/* line 52, ../sass/modules/_link-module.scss */
 .ss-link-module .module p.description {
   height: 45px;
 }
-/* line 54, ../sass/modules/_link-module.scss */
+/* line 57, ../sass/modules/_link-module.scss */
 .ss-link-module .module .info-module .title {
   font-weight: 500;
   margin-bottom: 12px;
 }
-/* line 59, ../sass/modules/_link-module.scss */
+/* line 62, ../sass/modules/_link-module.scss */
 .ss-link-module .module .info-module .desc {
   font-weight: 500;
   margin-bottom: 12px;
   color: #999999;
 }
-/* line 66, ../sass/modules/_link-module.scss */
+/* line 69, ../sass/modules/_link-module.scss */
 .ss-link-module .module hr {
   margin: 0 0 12px 0;
   border-top: 1px solid #dae2ef;
 }
-/* line 73, ../sass/modules/_link-module.scss */
+/* line 76, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module {
   max-width: 54%;
   display: initial;
 }
-/* line 76, ../sass/modules/_link-module.scss */
+/* line 79, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .picture {
   margin: 0;
   width: 30px;
@@ -525,15 +568,15 @@ a:hover {
   margin-right: 6px;
   background: #dae2ef;
 }
-/* line 87, ../sass/modules/_link-module.scss */
+/* line 90, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .picture img {
   width: 100%;
 }
-/* line 91, ../sass/modules/_link-module.scss */
+/* line 94, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .author {
   display: inline-block;
 }
-/* line 93, ../sass/modules/_link-module.scss */
+/* line 96, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .author .name {
   display: block;
   font-size: 14px;
@@ -541,41 +584,41 @@ a:hover {
   margin-bottom: -6px;
   color: #666666;
 }
-/* line 100, ../sass/modules/_link-module.scss */
+/* line 103, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .author .date {
   display: inline-block;
   font-size: 11px;
   font-weight: 300;
   margin-bottom: 0;
 }
-/* line 109, ../sass/modules/_link-module.scss */
+/* line 112, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper {
   float: right;
   margin-top: 8px;
 }
-/* line 113, ../sass/modules/_link-module.scss */
+/* line 116, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper span {
   width: 22px;
   height: 22px;
   display: inline-block;
   margin-left: 5px;
 }
-/* line 120, ../sass/modules/_link-module.scss */
+/* line 123, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper .ss-icon-like {
   background: url("../images/icon_like.svg") no-repeat center center;
 }
-/* line 126, ../sass/modules/_link-module.scss */
+/* line 129, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper .ss-icon-fav {
   background: url("../images/icon_favorite.svg") no-repeat center center;
 }
-/* line 132, ../sass/modules/_link-module.scss */
+/* line 135, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper .ss-icon-comment {
   background: url("../images/icon_comment.svg") no-repeat center center;
 }
 
 /* line 2, ../sass/pages/_links-page.scss */
 .ss-links-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   padding: 0;
 }
 

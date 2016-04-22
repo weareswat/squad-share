@@ -18,6 +18,10 @@
 // Links Module
 .ss-link-module{
 	margin-bottom: 24px;
+	-webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    // -webkit-transition-delay: 2s; /* Safari */
+    // transition-delay: 2s;
 
 	a{
 		width: 100%;
@@ -66,6 +70,44 @@
 		hr {
 			margin: 0 0 12px 0;
 			border-top: 1px solid $primary-color-light;
+		}
+
+	}
+
+	.icon-go-url{
+		display: block;
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 70px;
+	    height: 70px;
+	    margin: -44px 0 0 -37px;
+	    text-indent: -23em;
+	    overflow: hidden;
+	    background: url('../images/icon_gourl.svg') no-repeat center center;
+	    opacity: 0;
+	    z-index: 77777;
+	    -webkit-transition: all 0.5s ease-out;
+    	transition: all 0.5s ease-out;
+		&:before {
+		    display: block;
+		    width: 38px;
+		    height: 38px;
+		    text-align: center;
+		    font-size: 22px;
+		    font-weight: normal;
+		    font-variant: normal;
+		    text-indent: 0;
+		    text-decoration: inherit;
+		    line-height: 38px;
+		    color: $primary-color;
+		    -webkit-transition: all .25s ease-out;
+		    transition: all .25s ease-out;
+		}
+	}
+	&:hover{
+		.icon-go-url{
+			opacity: 1;
 		}
 	}
 
@@ -137,3 +179,4 @@
 		}
 	}
 }
+

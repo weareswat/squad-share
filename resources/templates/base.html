@@ -3,7 +3,7 @@
   <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <META name="viewport" content="width=device-width, initial-scale=1">
-    <title>Squad Share</title>
+    <title>SquadShare</title>
     <link rel='' type='image/x-icon' href='/favicon.ico' />
 
     <!-- styles -->
@@ -43,10 +43,12 @@
     {% script "/assets/tether/dist/js/tether.min.js" %}
     {% script "/assets/bootstrap/js/bootstrap.min.js" %}
     {% script "/js/floatLabel.js" %}
+    {% script "/js/trim.js" %}
 
     <script type="text/javascript">
       var context = "{{servlet-context}}";
     </script>
+    
     {% block page-scripts %}
     {% endblock %}
   </body>

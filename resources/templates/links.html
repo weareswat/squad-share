@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-
 <div class="row"> 
   <div class="col-md-12 ss-search">
     <h2 class="ss-search__title">Search Links</h2>
@@ -14,7 +13,6 @@
     </ul>
   </div>
 </div>
-
 
 <div class="row"> 
   <div class="container ss-links-wrapper">
@@ -29,7 +27,6 @@
       </figure>
     </div>
     
-    
     <!--   Link Module -->
     {% for link in links %} 
     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 ss-link-module">
@@ -39,7 +36,7 @@
           
           <img class="thumbnail" src="images/img_default.svg" alt="{{link.title}}">
           <figcaption>
-            <h3>{{link.title}}</h3>
+            <h3 class="link-title">{{link.title}}</h3>
             <p class="description">{{link.description}}</p>
           </figcaption> 
           
@@ -64,10 +61,10 @@
 
     </div>
     {% endfor %}
-    <!--  End Link Module -->
+    <!-- End Link Module -->
 
-  </div><!--   End ss-links-wrapper -->
-</div><!--   End Row -->
+  </div><!-- End ss-links-wrapper -->
+</div><!-- End Row -->
 
 </div>
 {% endblock %}

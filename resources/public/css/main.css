@@ -34,7 +34,7 @@ p {
   font-size: 14px;
 }
 
-/* line 5, ../sass/helpers/_links.scss */
+/* line 3, ../sass/helpers/_links.scss */
 a:hover {
   text-decoration: none;
 }
@@ -140,15 +140,6 @@ a:hover {
   float: right;
 }
 
-@media screen and (max-width: 500px) {
-  /* line 30, ../sass/modules/_navbar.scss */
-  .ss-navbar__brand,
-  .ss-navbar__title {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-}
 /* line 10, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
 html, body {
   height: 100%;
@@ -186,12 +177,6 @@ html, body {
   font-weight: 300;
 }
 
-@media screen and (max-width: 500px) {
-  /* line 14, ../sass/modules/_footer.scss */
-  .ss-footer p {
-    text-align: center;
-  }
-}
 /* line 2, ../sass/modules/_search.scss */
 .ss-search {
   padding-left: 0;
@@ -741,4 +726,33 @@ html, body {
 /* line 33, ../sass/vendors/_overrides.scss */
 .form-all {
   margin-bottom: 24px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 2, ../sass/_mobile.scss */
+  .ss-navbar {
+    padding: 48px 0 24px 0;
+  }
+
+  /* line 7, ../sass/_mobile.scss */
+  .ss-navbar__brand,
+  .ss-navbar__title {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* line 14, ../sass/_mobile.scss */
+  .ss-search .ss-search__title {
+    font-size: 28px;
+  }
+  /* line 17, ../sass/_mobile.scss */
+  .ss-search ul li:nth-child(2n+1) {
+    margin: 0 18px;
+  }
+
+  /* line 21, ../sass/_mobile.scss */
+  .ss-footer p {
+    text-align: center;
+  }
 }

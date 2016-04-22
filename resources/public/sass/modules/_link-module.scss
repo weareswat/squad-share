@@ -1,106 +1,136 @@
+// Card Add Url
+.card-add-url{
+	.add-url{
+		background: $primary-color-light;
+		border-top: 6px solid $primary-color;
+		height: 100%;
+		-webkit-transition: all .25s ease-out;
+    	transition: all .25s ease-out;
+		.title-add-link{
+			padding: 70px 0px;
+		}
+		&:hover{
+			opacity: 0.3;
+		}
+	}
+}
+
 // Links Module
 .ss-link-module{
-	margin-bottom: 48px;
+	margin-bottom: 20px;
 
-	.ss-link-module__image{
+	a{
+		width: 100%;
+		float: left;
+		color: $light-text-color;
+		font-weight: 300;
+	}
+
+	.module{
 		border-top: 6px solid $primary-color;
 		width: 100%;
-		height: 144px;
 		overflow: hidden;
-		margin-bottom: 12px;
+		-webkit-transition: all 0.5s ease-out;
+    	transition: all 0.5s ease-out;
+
+		&:hover{
+			opacity: 0.3;
+		}
 
 		img{
 			width: 100%;
+			margin-bottom: 15px;
+		}
+
+		h3{
+			color: $dark-text-color;
+		}
+
+		p.description{
+			height: 45px;
+		}
+
+		.info-module{
+			.title{
+				font-weight: 500;
+				margin-bottom: 12px;
+			}
+
+			.desc{
+				font-weight: 500;
+				margin-bottom: 12px;
+				color: $light-text-color;
+			}
+		}
+		
+		hr {
+			margin: 0 0 12px 0;
+			border-top: 1px solid $primary-color-light;
 		}
 	}
-
-	.ss-link-module__title{
-		font-weight: 500;
-		margin-bottom: 12px;
-	}
-
-	.ss-link-module__desc{
-		font-weight: 500;
-		margin-bottom: 12px;
-		color: $light-text-color;
-	}
-	
-	hr {
-		margin: 0 0 12px 0;
-		border-top: 1px solid #f2f2f2;
-	}
-
-
-
 
 	// Separação Div
-	.ss-link-module__info{
+	.info-module{
 		max-width: 54%;
 		display: initial;
-	}
-
-
-	.ss-link-module__picture{
-		margin: 0;
-		width: 30px;
-		height: 30px;
-		overflow: hidden;
-		border-radius: 30px;
-		-webkit-border-radius: 30px;
-		display: inline-block;
-		margin-right: 6px;
-
-		img{
-			width: 100%;
-		}
-	}
-
-	.ss-link-module__author{
-		display: inline-block;
-
-		.ss-link-module__name{
-			display:block;
-			font-size: 14px;
-			font-weight: 400;
-			margin-bottom: -6px;
-		}
-
-		.ss-link-module__date{
+		.picture{
+			margin: 0;
+			width: 30px;
+			height: 30px;
+			overflow: hidden;
+			border-radius: 30px;
+			-webkit-border-radius: 30px;
 			display: inline-block;
-			font-size: 11px;
-			font-weight: 300;
-			margin-bottom: 0;
+			margin-right: 6px;
+			background: $primary-color-light;
+
+			img{
+				width: 100%;
+			}
+		}
+		.author{
+			display: inline-block;
+			.name{
+				display:block;
+				font-size: 14px;
+				font-weight: 400;
+				margin-bottom: -6px;
+				color: $text-color;
+			}
+			.date{
+				display: inline-block;
+				font-size: 11px;
+				font-weight: 300;
+				margin-bottom: 0;
+			}
 		}
 	}
 
-	.ss-link-module__icons-wrapper{
+	.icons-wrapper{
 		float: right;
 		margin-top: 8px;
 
 		span{
-			width: 18px;
-			height: 18px;
+			width: 22px;
+			height: 22px;
 			display: inline-block;
-			margin-left: 12px;
+			margin-left: 5px;
 		}
 
 		.ss-icon-like{
-			background-image: url('');
-			background-color: blue;
+			background: url('../images/icon_like.svg') no-repeat center center;
 			&:hover{
 
 			}
 		}
 		.ss-icon-fav{
-			background-image: url('');
-			background-color: green;
+			background: url('../images/icon_favorite.svg') no-repeat center center;
 			&:hover{
 				
 			}
 		}
 		.ss-icon-comment{
-			background-image: url('');
-			background-color: pink;
+			background: url('../images/icon_comment.svg') no-repeat center center;
 			&:hover{
 				
 			}

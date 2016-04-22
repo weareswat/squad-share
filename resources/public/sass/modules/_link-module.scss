@@ -1,6 +1,8 @@
 // Card Add Url
 .card-add-url{
 	min-height: 304px;
+	-webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 	
 	.add-url{
 		background: $primary-color-light;

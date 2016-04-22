@@ -196,12 +196,52 @@ html, body {
 .ss-search {
   padding-left: 0;
   padding-right: 0;
-}
-
-/* line 6, ../sass/modules/_search.scss */
-.ss-search__title {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+}
+/* line 8, ../sass/modules/_search.scss */
+.ss-search .ss-search__title {
+  text-align: center;
+  margin-bottom: 12px;
+  color: #4d4d4d;
+  font-size: 30px;
+}
+/* line 14, ../sass/modules/_search.scss */
+.ss-search ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 19, ../sass/modules/_search.scss */
+.ss-search ul li {
+  display: inline-block;
+  color: #ccc;
+  width: 36px;
+  height: 36px;
+  font-size: 40px;
+  font-weight: 300;
+}
+/* line 27, ../sass/modules/_search.scss */
+.ss-search ul li:nth-child(2n+1) {
+  margin: 0 24px;
+}
+/* line 30, ../sass/modules/_search.scss */
+.ss-search ul li span {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+/* line 35, ../sass/modules/_search.scss */
+.ss-search ul li .search-icon-tags {
+  background: url("../images/icon-search-tags.svg") no-repeat center center;
+}
+/* line 38, ../sass/modules/_search.scss */
+.ss-search ul li .search-icon-fav {
+  background: url("../images/icon-search-fav.svg") no-repeat center center;
+}
+/* line 41, ../sass/modules/_search.scss */
+.ss-search ul li .search-icon-search {
+  background: url("../images/icon-search-search.svg") no-repeat center center;
 }
 
 /* line 1, ../sass/modules/_floatLabels.scss */

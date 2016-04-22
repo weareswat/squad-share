@@ -2,8 +2,47 @@
 .ss-search{
 	padding-left: 0;
 	padding-right: 0;
-}
-.ss-search__title{
 	text-align: center;
-	margin-bottom: $medium-margin;
+	margin-bottom: 48px;
+
+	.ss-search__title{
+		text-align: center;
+		margin-bottom: $small-margin;
+		color: $dark-text-color;
+		font-size: 30px;
+	}
+	ul{	
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		
+		li{
+			display: inline-block;
+			color: #ccc;
+			width: 36px;
+			height: 36px;
+			font-size: 40px;
+			font-weight: 300;		
+
+			&:nth-child(2n+1){
+				margin: 0 24px;
+			}
+			span{
+				width: 36px;
+				height: 36px;
+				display: block;
+			}
+			.search-icon-tags{
+				background: url('../images/icon-search-tags.svg') no-repeat center center;
+			}
+			.search-icon-fav{
+				background: url('../images/icon-search-fav.svg') no-repeat center center;
+			}
+			.search-icon-search{
+				background: url('../images/icon-search-search.svg') no-repeat center center;
+			}
+		}
+	}
+
+
 }

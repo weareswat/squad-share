@@ -1,16 +1,35 @@
-{% block content %}
+<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 add-link">
+	<div class="title-add-link">
+		<div class="icon-link-url"></div>
+		<h3>Share Url</h3>
+	</div>
+	{% block content %}
 
-<form action="/save-link" method="POST">
-  <label for="title">Title</label>
-  <input id="title" type="text" name="title" />
+	<form role="form" action="/save-link" method="POST">
+		<div class="col-md-12 col-sm-12 col-xs-12 form-all">
+			<div class="form-group float-label-control">
+				<label for="title">Title</label>
+				<input id="title" type="text" name="title" class="form-control" placeholder="Title" />
+			</div>
 
-  <label for="url">Url</label>
-  <input id="url" type="text" name="url" />
+			<div class="form-group float-label-control">
+			  <label for="url">Url</label>
+			  <input id="url" type="text" name="url" class="form-control" placeholder="Url"/>
+			</div>
 
-  <label for="description">Description</label>
-  <input id="description" type="text" name="description" />
+			<div class="form-group float-label-control">
+			  <label for="description">Description</label>
+			  <textarea id="description" type="text" name="Description"  class="form-control" placeholder="Description" rows="1"></textarea>
+			</div>
+		</div>
 
-  <input type="submit" value="Create" />
-</form>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+			<a href="/" class="btn btn-secondary">Cancel</a>
+		</div>
+		<div class="col-md-6 col-sm-6 col-xs-12">
+	  	<button type="submit" class="btn btn-primary">Create</button>
+	  </div>
+	</form>
 
-{% endblock %}
+	{% endblock %}
+</div>

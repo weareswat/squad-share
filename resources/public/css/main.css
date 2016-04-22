@@ -501,16 +501,18 @@ html, body {
 /* line 21, ../sass/modules/_link-module.scss */
 .ss-link-module {
   margin-bottom: 24px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   min-height: 304px;
 }
-/* line 25, ../sass/modules/_link-module.scss */
+/* line 27, ../sass/modules/_link-module.scss */
 .ss-link-module a {
   width: 100%;
   float: left;
   color: #999999;
   font-weight: 300;
 }
-/* line 32, ../sass/modules/_link-module.scss */
+/* line 34, ../sass/modules/_link-module.scss */
 .ss-link-module .module {
   border-top: 6px solid #a3b7d6;
   width: 100%;
@@ -518,45 +520,82 @@ html, body {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-/* line 39, ../sass/modules/_link-module.scss */
+/* line 41, ../sass/modules/_link-module.scss */
 .ss-link-module .module:hover {
   opacity: 0.3;
 }
-/* line 43, ../sass/modules/_link-module.scss */
+/* line 45, ../sass/modules/_link-module.scss */
 .ss-link-module .module img {
   width: 100%;
   margin-bottom: 15px;
 }
-/* line 48, ../sass/modules/_link-module.scss */
+/* line 50, ../sass/modules/_link-module.scss */
 .ss-link-module .module h3 {
   color: #4d4d4d;
 }
-/* line 52, ../sass/modules/_link-module.scss */
+/* line 54, ../sass/modules/_link-module.scss */
 .ss-link-module .module p.description {
   height: 45px;
 }
-/* line 57, ../sass/modules/_link-module.scss */
+/* line 59, ../sass/modules/_link-module.scss */
 .ss-link-module .module .info-module .title {
   font-weight: 500;
   margin-bottom: 12px;
 }
-/* line 62, ../sass/modules/_link-module.scss */
+/* line 64, ../sass/modules/_link-module.scss */
 .ss-link-module .module .info-module .desc {
   font-weight: 500;
   margin-bottom: 12px;
   color: #999999;
 }
-/* line 69, ../sass/modules/_link-module.scss */
+/* line 71, ../sass/modules/_link-module.scss */
 .ss-link-module .module hr {
   margin: 0 0 12px 0;
   border-top: 1px solid #dae2ef;
 }
-/* line 76, ../sass/modules/_link-module.scss */
+/* line 78, ../sass/modules/_link-module.scss */
+.ss-link-module .icon-go-url {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin: -44px 0 0 -37px;
+  text-indent: -23em;
+  overflow: hidden;
+  background: url("../images/icon_gourl.svg") no-repeat center center;
+  opacity: 0;
+  z-index: 77777;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+/* line 93, ../sass/modules/_link-module.scss */
+.ss-link-module .icon-go-url:before {
+  display: block;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: normal;
+  font-variant: normal;
+  text-indent: 0;
+  text-decoration: inherit;
+  line-height: 38px;
+  color: #a3b7d6;
+  -webkit-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+/* line 110, ../sass/modules/_link-module.scss */
+.ss-link-module:hover .icon-go-url {
+  opacity: 1;
+}
+/* line 116, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module {
   max-width: 54%;
   display: initial;
 }
-/* line 79, ../sass/modules/_link-module.scss */
+/* line 119, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .picture {
   margin: 0;
   width: 30px;
@@ -568,15 +607,15 @@ html, body {
   margin-right: 6px;
   background: #dae2ef;
 }
-/* line 90, ../sass/modules/_link-module.scss */
+/* line 130, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .picture img {
   width: 100%;
 }
-/* line 94, ../sass/modules/_link-module.scss */
+/* line 134, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .author {
   display: inline-block;
 }
-/* line 96, ../sass/modules/_link-module.scss */
+/* line 136, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .author .name {
   display: block;
   font-size: 14px;
@@ -584,34 +623,34 @@ html, body {
   margin-bottom: -6px;
   color: #666666;
 }
-/* line 103, ../sass/modules/_link-module.scss */
+/* line 143, ../sass/modules/_link-module.scss */
 .ss-link-module .info-module .author .date {
   display: inline-block;
   font-size: 11px;
   font-weight: 300;
   margin-bottom: 0;
 }
-/* line 112, ../sass/modules/_link-module.scss */
+/* line 152, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper {
   float: right;
   margin-top: 8px;
 }
-/* line 116, ../sass/modules/_link-module.scss */
+/* line 156, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper span {
   width: 22px;
   height: 22px;
   display: inline-block;
   margin-left: 5px;
 }
-/* line 123, ../sass/modules/_link-module.scss */
+/* line 163, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper .ss-icon-like {
   background: url("../images/icon_like.svg") no-repeat center center;
 }
-/* line 129, ../sass/modules/_link-module.scss */
+/* line 169, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper .ss-icon-fav {
   background: url("../images/icon_favorite.svg") no-repeat center center;
 }
-/* line 135, ../sass/modules/_link-module.scss */
+/* line 175, ../sass/modules/_link-module.scss */
 .ss-link-module .icons-wrapper .ss-icon-comment {
   background: url("../images/icon_comment.svg") no-repeat center center;
 }

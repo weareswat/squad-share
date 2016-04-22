@@ -1,0 +1,26 @@
+@media screen and (max-width: 500px){
+	.ss-navbar{
+		padding: 48px 0 24px 0;
+	}
+	
+	.ss-navbar__brand,
+	.ss-navbar__title{
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.ss-search{
+		.ss-search__title{
+			font-size: 28px;
+		}
+		ul li:nth-child(2n+1) {
+			margin: 0 18px;
+		}
+	}
+	.ss-footer p{
+		text-align: center;
+	}
+} 
+
+

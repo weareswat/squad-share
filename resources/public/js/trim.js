@@ -8,6 +8,6 @@ $(document).ready(function() {
     });
   }
 
-  trim(".link-title", 25);
+  trim(".link-title", 20);
   trim(".description", 60);
 });

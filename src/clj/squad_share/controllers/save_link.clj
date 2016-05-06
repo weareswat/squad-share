@@ -2,18 +2,8 @@
   (:require [cheshire.core :refer :all]
             [squad-share.layout :as layout]
             [clojure.string :as str]
-            [squad-share.interactors.save-link :as save-link]))
-
-(defn handler-json
-  "Save link using JSON on body"
-  [request]
-  (let [body (slurp (:body request))
-       link (parse-string body)
-       result (save-link/run! {} link)]
-       (if (:success result)
-          {:status 201 :body (generate-string (:link result))}
-          {:status 500}
-        )))
+            [squad-share.interactors.save-link :as save-link]
+            [squad-share.interactors.validate-link :as validate-link]))
 
 (defn- add-new-key-value-param
   "Get key-value from param and merge with the accumulator"
@@ -27,6 +17,20 @@
   [body]
   (let [params (str/split body #"&")]
     (reduce add-new-key-value-param {} params)))
+
+(defn handler-json
+  "Save link using JSON on body"
+  [request]
+  (let [body (slurp (:body request))
+       link (parse-string body)
+       validate-result (validate-link/run! (parse-string body true))]
+       (if (nil? (get validate-result 0))
+        (let [save-result (save-link/run! {} link)]
+        (if (:success save-result)
+          {:status 201 :body (generate-string (:link save-result))}
+          {:status 500}
+        ))
+        {:status 401 :body (generate-string (get validate-result 0))})))
 
 (defn handler-raw-post
   "Save link using querystring format on body"
@@ -42,11 +46,15 @@
   "Save link using querystring format on body"
   [request]
   (let [params (:params request)
-        result (save-link/run! {} params)
-        id (get-in result [:link :id])]
-     (if (:success result)
-        {:status 301 :headers {"Location" (str "/links?added=" id)}}
-        {:status 500})))
+        validate-result (validate-link/run! params)]
+        (if (nil? (get validate-result 0))
+          (let [save-result (save-link/run! {} params)
+                id (get-in save-result [:link :id])]
+            (if (:success save-result)
+              {:status 301 :headers {"Location" (str "/links?added=" id)}}
+              {:status 500}
+          ))
+        {:status 401 :body (generate-string (get validate-result 0))})))
 
 (defn handler-html
   "Returns a web form to add a link"

@@ -29,7 +29,8 @@
                  [alaisi/postgres.async "0.6.0"]
                  [postgresql "9.3-1102.jdbc41"]
                  [cheshire "5.6.1"]
-                 [clj-time "0.11.0"]]
+                 [clj-time "0.11.0"]
+                 [commons-validator "1.4.1"]]
 
   :aliases {"migrate"  ["run" "-m" "squad-share.migrations/migrate"]
             "rollback" ["run" "-m" "squad-share.migrations/rollback"]

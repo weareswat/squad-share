@@ -1,18 +1,18 @@
 (ns squad-share.interactors.validate-link
 	(:refer-clojure :exclude [run!])
 	(:require
-			[clojure.test :refer :all]
-			[clojure.core.async :refer [go <!!]]
-			[postgres.async :as pg]
-			[squad-share.config :as config]
-			[bouncer.core :as bouncer_core]
-			[bouncer.validators :as validators]))
+		[clojure.test :refer :all]
+		[clojure.core.async :refer [go <!!]]
+		[postgres.async :as pg]
+		[squad-share.config :as config]
+		[bouncer.core :as bouncer_core]
+		[bouncer.validators :as validators]))
 
 ;; http://stackoverflow.com/questions/28269117/clojure-regex-if-string-is-a-url-return-string
 (import 'org.apache.commons.validator.UrlValidator)
 (defn valid-url? [url-str]
-  (let [validator (UrlValidator.)]
-    (.isValid validator url-str)))
+	(let [validator (UrlValidator.)]
+		(.isValid validator url-str)))
 
 ;; https://github.com/leonardoborges/bouncer#basic-validations
 (defn run!

@@ -16,7 +16,7 @@
 			link_json (generate-string link)
 			response ((handler/app) (request :post "/save-link.json" link_json))
 			body (parse-string (:body response) true)]
-			(is (= 401 (:status response)))
+			(is (= 400 (:status response)))
 			(is (= '{:title ["title must be present"]} body))))
 
 	(testing "call link json route without url"
@@ -25,7 +25,7 @@
 			link_json (generate-string link)
 			response ((handler/app) (request :post "/save-link.json" link_json))
 			body (parse-string (:body response) true)]
-			(is (= 401 (:status response)))
+			(is (= 400 (:status response)))
 			(is (= '{:url ["url must be present"]} body))))
 
 	(testing "call link json route with invalid url"
@@ -34,7 +34,7 @@
 			link_json (generate-string link)
 			response ((handler/app) (request :post "/save-link.json" link_json))
 			body (parse-string (:body response) true)]
-			(is (= 401 (:status response)))
+			(is (= 400 (:status response)))
 			(is (= '{:url ["url invalid"]} body))))
 
 	(testing "save link json route"
@@ -55,21 +55,21 @@
 	(testing "save link route without title"
 		(let [link (str "?description=description&url=http://www.test.com")
 			response ((handler/app) (request :post (str "/save-link" link) ""))]
-			(is (= 401 (:status response)))
+			(is (= 400 (:status response)))
 			(is (= '{:title ["title must be present"]} (parse-string (:body response) true)))))
 
 	(testing "save link route without url"
 		(let [title (str (java.util.UUID/randomUUID))
 			link (str "?description=description&title=" title)
 			response ((handler/app) (request :post (str "/save-link" link) ""))]
-			(is (= 401 (:status response)))
+			(is (= 400 (:status response)))
 			(is (= '{:url ["url must be present"]} (parse-string (:body response) true)))))
 
 	(testing "save link route with invalid url"
 		(let [title (str (java.util.UUID/randomUUID))
 			link (str "?description=description&url=http://test&title=" title)
 			response ((handler/app) (request :post (str "/save-link" link) ""))]
-			(is (= 401 (:status response)))
+			(is (= 400 (:status response)))
 			(is (= '{:url ["url invalid"]} (parse-string (:body response) true)))))
 
 	(testing "save link route"

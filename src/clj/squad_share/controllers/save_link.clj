@@ -30,7 +30,7 @@
 					{:status 201 :body (generate-string (:link save-result))}
 					{:status 500}
 					))
-			{:status 401 :body (generate-string (get validate-result 0))})))
+			{:status 400 :body (generate-string (get validate-result 0))})))
 
 (defn handler-raw-post
 	"Save link using querystring format on body"
@@ -54,7 +54,7 @@
 					{:status 301 :headers {"Location" (str "/links?added=" id)}}
 					{:status 500}
 					))
-			{:status 401 :body (generate-string (get validate-result 0))})))
+			{:status 400 :body (generate-string (get validate-result 0))})))
 
 (defn handler-html
 	"Returns a web form to add a link"

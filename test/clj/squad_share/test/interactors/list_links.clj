@@ -10,8 +10,8 @@
 
 (deftest list-links
    (let [ 
-          _ (<!! (pg/insert! config/db {:table "squadshare.links"} {:title (str (java.util.UUID/randomUUID)), :description "Description", :url "http://test"}))
-          _ (<!! (pg/insert! config/db {:table "squadshare.links"} {:title (str (java.util.UUID/randomUUID)), :description "Description", :url "http://test"}))
+          _ (<!! (pg/insert! config/db {:table "squadshare.links"} {:title (str (java.util.UUID/randomUUID)), :description "Description", :url "http://www.test.com"}))
+          _ (<!! (pg/insert! config/db {:table "squadshare.links"} {:title (str (java.util.UUID/randomUUID)), :description "Description", :url "http://www.test.com"}))
           context {}
           result (list-links/run! context)]
     (testing "the link is retreived by the interactor"

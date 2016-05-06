@@ -13,11 +13,10 @@
 (deftest save-link-json-route
   (testing "save link json route"
     (let [title (str (java.util.UUID/randomUUID))
-          link {:title title :description "Description" :url "http://test"}
+          link {:title title :description "Description" :url "http://www.test.com"}
           link_json (generate-string link)
           response ((handler/app) (request :post "/save-link.json" link_json))
-          body (parse-string (:body response) true)
-          ]
+          body (parse-string (:body response) true)]
       (is (= 201 (:status response)))
       (is body)
       (testing "the link is actually on the db"
@@ -30,9 +29,8 @@
 (deftest save-link-route
   (testing "save link route"
     (let [title (str (java.util.UUID/randomUUID))
-          link (str "?description=description&url=http://test&title=" title)
-          response ((handler/app) (request :post (str "/save-link" link) ""))
-          ]
+          link (str "?description=description&url=http://www.test.com&title=" title)
+          response ((handler/app) (request :post (str "/save-link" link) ""))]
       (is (= 301 (:status response)))
       (is (get-in response [:headers "Location"]))
       (testing "the link is actually on the db"

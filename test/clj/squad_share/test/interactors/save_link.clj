@@ -10,7 +10,7 @@
 
 (deftest add-link
   (let [title (str (java.util.UUID/randomUUID))
-        link {:title title :description "Description" :url "http://test"}
+        link {:title title :description "Description" :url "http://www.test.com"}
         context {}
         result (save-link/run! context link)]
     ;; expecting result to be {:success true :link {... saved link data}}

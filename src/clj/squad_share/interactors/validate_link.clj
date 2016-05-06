@@ -1,6 +1,10 @@
 (ns squad-share.interactors.validate-link
 	(:refer-clojure :exclude [run!])
 	(:require
+			[clojure.test :refer :all]
+			[clojure.core.async :refer [go <!!]]
+			[postgres.async :as pg]
+			[squad-share.config :as config]
 			[bouncer.core :as bouncer_core]
 			[bouncer.validators :as validators]))
 
@@ -19,8 +23,13 @@
 		{:default-message-format "%s invalid"}
 		[url]
 		(valid-url? url))
+	
+	(validators/defvalidator unique-url
+		{:default-message-format "%s already exists"}
+		[url]
+		(let [result (<!! (pg/execute! config/db ["select * from squadshare.links where url=$1" url]))]
+			(= (count (get result :rows)) 0)))
 
 	(bouncer_core/validate link-data
 		:title validators/required
-		:url [validators/required valid-url]
-		:description validators/required))
+		:url [validators/required valid-url unique-url]))
